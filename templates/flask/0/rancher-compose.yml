@@ -2,7 +2,7 @@
    name: flask
    version: 1.0.0-rancher
    description: |
-Cloudsoar flask Web
+     Cloudsoar flask Web
    questions:
        - variable: "scale_redis"
          description: "Number of redis nodes."
@@ -32,21 +32,21 @@ Cloudsoar flask Web
 redis:
   scale: ${scale_redis}
   metadata:
-io.rancher.service.hash: ca4e0e00b4af4d172ff3b94c8f0d631fb1670c50
+    io.rancher.service.hash: ca4e0e00b4af4d172ff3b94c8f0d631fb1670c50
 
 pyapp:
   scale: ${scale_pyapp}
   metadata:
-io.rancher.service.hash: bab1a465d6b5b59158eb1fc4c9ccece8e189809d
+    io.rancher.service.hash: bab1a465d6b5b59158eb1fc4c9ccece8e189809d
 
 pyapplb:
   scale: 1
-health_check:
+  health_check:
     port: 42
     interval: 2000
-unhealthy_threshold: 3
-healthy_threshold: 2
-response_timeout: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
   metadata:
-io.rancher.service.hash: c4261e2046b1cf1b7392084130b69aab11216d5f 
+    io.rancher.service.hash: c4261e2046b1cf1b7392084130b69aab11216d5f 
 
